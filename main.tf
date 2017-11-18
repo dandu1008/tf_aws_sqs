@@ -10,8 +10,6 @@ resource "aws_sqs_queue" "q" {
   redrive_policy = "${var.redrive_policy}"
   policy         = "${var.policy}"
 
-  #name_prefix = "${var.name_prefix}"
-
   fifo_queue = "${var.fifo_queue}"
   content_based_deduplication       = "${var.content_based_deduplication}"
   kms_master_key_id                 = "${var.kms_master_key_id}"

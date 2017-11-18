@@ -14,7 +14,7 @@ Module Input Variables
 * \[`receive_wait_time_seconds`\]: Int (optional): The time for which a ReceiveMessage call will wait for a message to arrive (long polling) before returning. An integer from 0 to 20 (seconds). The default for this attribute is 0, meaning that the call will return immediately.
 * \[`redrive_policy`\]: String (optional): The JSON policy to set up the Dead Letter Queue, see [AWS docs](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-dead-letter-queues.html). **Note**: when specifying _maxReceiveCount_, you must specify it as an integer (5), and not a string ("5"). 
 * \[`policy`\]: String (optional): The JSON policy for the SQS queue
-* \[`name_prefix`\]: String (optional): Creates a unique name beginning with the specified prefix. Conflicts with _name_.
+
 * \[`fifo_queue`\]: Boolean (optional): Boolean designating a FIFO queue. If not set, it defaults to _false_ making it standard.
 * \[`content_based_deduplication`\]: Boolean (optional): Enables content-based deduplication for FIFO queues. For more information, see the [related documentation](http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/FIFO-queues.html#FIFO-queues-exactly-once-processing). Default is _false_.
 * \[`kms_master_key_id`\]: String (optional): The ID of an AWS-managed customer master key (CMK) for Amazon SQS or a custom CMK. For more information, see [Key Terms](http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-server-side-encryption.html#sqs-sse-key-terms).
