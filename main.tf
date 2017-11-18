@@ -13,9 +13,8 @@ resource "aws_sqs_queue" "q" {
   #name_prefix = "${var.name_prefix}"
 
   fifo_queue = "${var.fifo_queue}"
-
-  content_based_deduplication = "${var.content_based_deduplication}"
-  kms_master_key_id = "${var.kms_master_key_id}"
+  content_based_deduplication       = "${var.content_based_deduplication}"
+  kms_master_key_id                 = "${var.kms_master_key_id}"
   kms_data_key_reuse_period_seconds = "${var.kms_data_key_reuse_period_seconds}"
-  tags = "${merge(var.tags, map("Name", format("%s", var.name)))}"
+  tags                              = "${merge(var.tags, map("Name", format("%s", var.name)))}"
 }

@@ -1,7 +1,7 @@
 output "url" {
-  value                     = "${aws_sqs_queue.q.id}"
+  value = "${aws_sqs_queue.q.id}"
 }
 
 output "arn" {
-  value                     = "${aws_sqs_queue.q.arn}"
+  value = "${aws_sqs_queue.q.arn}"
 }
