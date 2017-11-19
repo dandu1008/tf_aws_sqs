@@ -10,9 +10,11 @@ resource "aws_sqs_queue" "q" {
   redrive_policy = "${var.redrive_policy}"
   policy         = "${var.policy}"
 
-  fifo_queue                        = "${var.fifo_queue}"
-  content_based_deduplication       = "${var.content_based_deduplication}"
-  kms_master_key_id                 = "${var.kms_master_key_id}"
-  kms_data_key_reuse_period_seconds = "${var.kms_data_key_reuse_period_seconds}"
-  tags                              = "${merge(var.tags, map("Name", format("%s", var.name)))}"
+  fifo_queue                  = "${var.fifo_queue}"
+  content_based_deduplication = "${var.content_based_deduplication}"
+  kms_master_key_id           = "${var.kms_master_key_id}"
+
+  #kms_data_key_reuse_period_seconds = "${var.kms_data_key_reuse_period_seconds}"
+
+  tags = "${merge(var.tags, map("Name", format("%s", var.name)))}"
 }

@@ -14,11 +14,9 @@ Module Input Variables
 * \[`receive_wait_time_seconds`\]: Int (optional): The time for which a ReceiveMessage call will wait for a message to arrive (long polling) before returning. An integer from 0 to 20 (seconds). The default for this attribute is 0, meaning that the call will return immediately.
 * \[`redrive_policy`\]: String (optional): The JSON policy to set up the Dead Letter Queue, see [AWS docs](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-dead-letter-queues.html). **Note**: when specifying _maxReceiveCount_, you must specify it as an integer (5), and not a string ("5"). 
 * \[`policy`\]: String (optional): The JSON policy for the SQS queue
-
 * \[`fifo_queue`\]: Boolean (optional): Boolean designating a FIFO queue. If not set, it defaults to _false_ making it standard.
 * \[`content_based_deduplication`\]: Boolean (optional): Enables content-based deduplication for FIFO queues. For more information, see the [related documentation](http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/FIFO-queues.html#FIFO-queues-exactly-once-processing). Default is _false_.
 * \[`kms_master_key_id`\]: String (optional): The ID of an AWS-managed customer master key (CMK) for Amazon SQS or a custom CMK. For more information, see [Key Terms](http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-server-side-encryption.html#sqs-sse-key-terms).
-* \[`kms_data_key_reuse_period_seconds`\]: Int (optional): The length of time, in seconds, for which Amazon SQS can reuse a data key to encrypt or decrypt messages before calling AWS KMS again. An integer representing seconds, between 60 seconds (1 minute) and 86,400 seconds (24 hours). The default is 300 (5 minutes).
 * \[`tags`\]: Map (optional): A mapping of tags to assign to the queue. 
 
 Usage
